@@ -67,7 +67,7 @@
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 9.6rem;
+  gap: 9.6rem;
   align-items: center;
 }
 
@@ -137,4 +137,59 @@
   height: 3.2rem;
   filter: brightness(0);
   opacity: 0.5;
+}
+
+/* ************************************************* */
+/* HOW SECTION*/
+/* ************************************************* */
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-no {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.step-imgbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-imgbox::before,
+.step-imgbox::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-imgbox::before {
+  width: 60%;
+  /*we can't set height & width in percentage(%) together in pseudo element but we can set the fixed value of height & width together */
+  padding-bottom: 60%; /*working as a height*/
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+
+.step-imgbox::after {
+  width: 200px;
+  height: 200px;
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+.step-img {
+  width: 35%;
 }
