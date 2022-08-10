@@ -49,4 +49,168 @@
   .hero-textbox {
     text-align: center;
   }
+  .hero-imgbox {
+    text-align: center;
+  }
+  .hero-img {
+    width: 60%;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+  .step-no {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem;
+  }
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+  .btn-form {
+    margin-top: 1.2rem;
+  }
+
+  /* Footer query */
+  /* ===============MOBILE NAV=============== */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+  .main-nav {
+    background-color: rgba(255 255 255/0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /*for safari */
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    /* display: none; */ /*object doesn't exist */
+    visibility: hidden; /*object exist but we can't see that */
+    opacity: 0; /*it's animatable & we can give it a transition */
+    pointer-events: none;
+    transition: all 0.5s ease-in;
+  }
+
+  /* we will toggle nav-open header class by js which means mobile-nav will work only when nav-open class exist  */
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto; /* default value*/
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/* ************************************************* */
+/*SMALL TABLETS*/
+/* ************************************************* */
+@media (max-width: 700px) {
+  .grid-3-cols,
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1/4; /* column 1 to 4*/
+    /* or grid-column:1/-1 means 1st column to last column*/
+    justify-self: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+}
+
+/* ************************************************* */
+/*SMART PHONES*/
+/* ************************************************* */
+@media (max-width: 570px) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid-2-cols,
+  .grid-3-cols,
+  .grid-4-cols {
+    grid-template-columns: 1fr;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem;
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-imgbox:nth-child(2) {
+    grid-row: 1;
+  }
+  .step-imgbox:nth-child(6) {
+    grid-row: 5;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  .cta-textbox {
+    padding: 3.2rem;
+  }
+  .cta-imgbox {
+    height: 30rem;
+    grid-row: 1;
+  }
 }
