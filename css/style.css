@@ -220,8 +220,8 @@
 }
 
 .step-imgbox::after {
-  width: 45%;
-  height: 45%;
+  width: 43%;
+  padding-bottom: 43%;
   background-color: #fae5d3;
   z-index: -1;
 }
@@ -539,4 +539,45 @@
 .cta-form input:focus,
 .cta-form select:focus {
   outline: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ************************************************* */
+/* FOOTER */
+/* ************************************************* */
+.section-footer {
+  border-top: 3px solid #ddd;
+}
+.footer-container {
+  margin: 9.6rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 8rem;
+}
+
+.footer-logo {
+  margin-bottom: 2.4rem;
+}
+.footer-heading {
+  margin-bottom: 3.2rem;
+}
+.footer-link {
+  text-decoration: none;
+  font-family: inherit;
+  color: #555;
+}
+.footer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.footer-icon {
+  font-size: 1.6rem;
 }
